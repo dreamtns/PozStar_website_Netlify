@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+php/error_log.txt
+
+php/con.php
+php/config.php
+
+php/contact_data.json
+

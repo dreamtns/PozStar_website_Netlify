@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K5BK2KN4');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHJKK3M5TM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VHJKK3M5TM');
+    </script>
+    <meta charset="utf-8">
+    <title>PozStar Pilot - Machine Guidance and Field Positioning</title>
+    <meta name="description"
+        content="PozStar Pilot connects RTK GNSS positioning, field software, and machine guidance workflows for precise construction, surveying, and site operations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/poz.png">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/header.js"></script>
+    <style>
+        .pilot-hero {
+            min-height: calc(100vh - 60px);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: end;
+            background: #111;
+        }
+
+        .pilot-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pilot-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(61, 61, 61, 0.68);
+        }
+
+        .pilot-hero__content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 160px 0 54px;
+            color: #fff;
+        }
+
+        .pilot-hero__eyebrow,
+        .pilot-section__eyebrow {
+            color: #d72323;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .pilot-hero__title {
+            color: #fff;
+            font-size: clamp(44px, 7vw, 94px);
+            line-height: .95;
+            margin: 18px 0 22px;
+        }
+
+        .pilot-hero__copy {
+            color: rgba(255, 255, 255, .86);
+            font-size: 20px;
+            line-height: 1.65;
+            max-width: 650px;
+        }
+
+        .pilot-hero__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 34px;
+        }
+
+        .pilot-hero__button {
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, .44);
+            color: #fff;
+            display: inline-flex;
+            font-weight: 700;
+            min-height: 48px;
+            padding: 0 24px;
+            transition: all .2s ease;
+        }
+
+        .pilot-hero__button:hover {
+            background: #d72323;
+            border-color: #d72323;
+            color: #fff;
+        }
+
+        .pilot-hero__stats {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: 70px;
+            max-width: 820px;
+        }
+
+        .pilot-hero__stat {
+            border-top: 1px solid rgba(255, 255, 255, .28);
+            padding-top: 18px;
+        }
+
+        .pilot-hero__stat strong {
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .pilot-hero__stat span {
+            color: rgba(255, 255, 255, .72);
+            font-size: 14px;
+        }
+
+        .pilot-section {
+            padding: 92px 0;
+        }
+
+        .pilot-section--soft {
+            background: #f7f9fc;
+        }
+
+        .pilot-section__title {
+            color: #101820;
+            font-size: clamp(32px, 4vw, 54px);
+            line-height: 1.08;
+            margin: 12px 0 18px;
+        }
+
+        .pilot-section__copy {
+            color: #5f6772;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .pilot-feature-grid {
+            display: grid;
+            gap: 22px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: 42px;
+        }
+
+        .pilot-feature {
+            background: #fff;
+            border: 1px solid #e7edf4;
+            border-radius: 8px;
+            padding: 28px;
+        }
+
+        .pilot-feature h3 {
+            color: #101820;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .pilot-feature p {
+            color: #69717c;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .pilot-workflow {
+            display: grid;
+            gap: 26px;
+            grid-template-columns: .9fr 1.1fr;
+            align-items: center;
+        }
+
+        .pilot-workflow__image {
+            border-radius: 8px;
+            box-shadow: 0 24px 60px rgba(16, 24, 32, .14);
+            width: 100%;
+        }
+
+        .pilot-steps {
+            display: grid;
+            gap: 18px;
+        }
+
+        .pilot-step {
+            border-left: 3px solid #d72323;
+            padding-left: 20px;
+        }
+
+        .pilot-step h3 {
+            color: #101820;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .pilot-step p {
+            color: #69717c;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .pilot-video-panel {
+            position: relative;
+            overflow: hidden;
+            min-height: 470px;
+            display: flex;
+            align-items: center;
+            background: #111;
+        }
+
+        .pilot-video-panel .pilot-video-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pilot-video-panel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(61, 61, 61, 0.68);
+        }
+
+        .pilot-video-panel__content {
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pilot-video-panel__content h2 {
+            color: #fff;
+            font-size: clamp(34px, 5vw, 64px);
+            line-height: 1.05;
+            margin-bottom: 16px;
+            max-width: 760px;
+        }
+
+        .pilot-video-panel__content p {
+            color: rgba(255, 255, 255, .84);
+            font-size: 18px;
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        @media (max-width: 991px) {
+
+            .pilot-feature-grid,
+            .pilot-workflow,
+            .pilot-hero__stats {
+                grid-template-columns: 1fr;
+            }
+
+            .pilot-hero {
+                min-height: 760px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .pilot-hero__content {
+                padding-top: 110px;
+            }
+
+            .pilot-hero__copy,
+            .pilot-video-panel__content p {
+                font-size: 16px;
+            }
+
+            .pilot-section {
+                padding: 64px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5BK2KN4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <div id="header-container"></div>
+    <main class="main__content_wrapper">
+        <section class="pilot-hero">
+            <video class="pilot-video-bg" autoplay muted loop playsinline preload="metadata"
+                data-hls-src="assets/videos/pozstar-pilot-hls/playlist.m3u8"></video>
+            <div class="pilot-hero__content">
+                <div class="container">
+                    <span class="pilot-hero__eyebrow">PozStar Pilot</span>
+                    <h1 class="pilot-hero__title">Machine guidance for precise field work.</h1>
+                    <p class="pilot-hero__copy">PozStar Pilot brings RTK GNSS positioning, operator guidance, and
+                        field-ready software into one workflow for construction, surveying, and site positioning teams.
+                    </p>
+                    <div class="pilot-hero__actions">
+                        <a class="pilot-hero__button" href="https://www.youtube.com/@PozStarPilot" target="_blank"
+                            rel="noopener">Watch Pilot Videos</a>
+                        <a class="pilot-hero__button" href="contact.html">Contact Sales</a>
+                    </div>
+                    <div class="pilot-hero__stats">
+                        <div class="pilot-hero__stat">
+                            <strong>RTK GNSS</strong>
+                            <span>Centimeter-level positioning workflows</span>
+                        </div>
+                        <div class="pilot-hero__stat">
+                            <strong>Field Software</strong>
+                            <span>Clear guidance for daily site tasks</span>
+                        </div>
+                        <div class="pilot-hero__stat">
+                            <strong>Machine Ready</strong>
+                            <span>Built for operators, surveyors, and crews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pilot-section pilot-section--soft">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-lg-7">
+                        <span class="pilot-section__eyebrow">Built for the site</span>
+                        <h2 class="pilot-section__title">Keep machines, survey data, and crews aligned.</h2>
+                    </div>
+                    <div class="col-lg-5">
+                        <p class="pilot-section__copy">Inspired by modern machine-control workflows, PozStar Pilot
+                            focuses on making position, design, and progress information easy to understand from the cab
+                            and in the field.</p>
+                    </div>
+                </div>
+                <div class="pilot-feature-grid">
+                    <article class="pilot-feature">
+                        <h3>Operator guidance</h3>
+                        <p>Give the operator clear visual direction for grading, excavation, alignment, and repeated
+                            positioning tasks.</p>
+                    </article>
+                    <article class="pilot-feature">
+                        <h3>Survey-grade inputs</h3>
+                        <p>Use PozStar RTK receivers and field software as the positioning foundation for reliable,
+                            repeatable site measurements.</p>
+                    </article>
+                    <article class="pilot-feature">
+                        <h3>Field-to-office flow</h3>
+                        <p>Support the everyday loop between plans, machine work, checks, and reporting without slowing
+                            crews down.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="pilot-section">
+            <div class="container">
+                <div class="pilot-workflow">
+                    <img class="pilot-workflow__image" src="assets/img/other/guidance2.jpg"
+                        alt="Machine guidance field workflow">
+                    <div>
+                        <span class="pilot-section__eyebrow">Pilot workflow</span>
+                        <h2 class="pilot-section__title">From GNSS fix to confident machine movement.</h2>
+                        <div class="pilot-steps">
+                            <div class="pilot-step">
+                                <h3>Position</h3>
+                                <p>Start with a fast RTK fix and keep the machine located accurately on the jobsite.</p>
+                            </div>
+                            <div class="pilot-step">
+                                <h3>Guide</h3>
+                                <p>Translate positioning data into practical on-screen guidance so the operator can work
+                                    to the intended line, level, or design.</p>
+                            </div>
+                            <div class="pilot-step">
+                                <h3>Verify</h3>
+                                <p>Use the same positioning ecosystem to check progress, reduce rework, and keep field
+                                    decisions grounded in measured data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pilot-video-panel">
+            <video class="pilot-video-bg" autoplay muted loop playsinline preload="metadata"
+                data-hls-src="assets/videos/pozstar-pilot-hls/playlist.m3u8"></video>
+            <div class="container">
+                <div class="pilot-video-panel__content">
+                    <h2>See PozStar Pilot in motion.</h2>
+                    <p>The page uses a muted, looping YouTube background in the same spirit as Unicontrol's motion-led
+                        presentation, while linking visitors to the PozStar Pilot channel for more demonstrations.</p>
+                    <a class="pilot-hero__button" href="https://www.youtube.com/@PozStarPilot" target="_blank"
+                        rel="noopener">Open YouTube Channel</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pilot-section pilot-section--soft">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <span class="pilot-section__eyebrow">Pilot ecosystem</span>
+                        <h2 class="pilot-section__title">Hardware and software working together.</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="pilot-section__copy">PozStar Pilot connects positioning hardware, operator displays,
+                            controllers, and field software for machine guidance, stakeout, measurement, and field
+                            verification workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="assets/js/plugins/hls.light.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var videos = Array.prototype.slice.call(document.querySelectorAll('.pilot-video-bg[data-hls-src]'));
+            videos.forEach(function (video) {
+                var hlsSrc = video.getAttribute('data-hls-src');
+
+                if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    video.src = hlsSrc;
+                    video.addEventListener('loadedmetadata', function () {
+                        var playPromise = video.play();
+                        if (playPromise && playPromise.catch) {
+                            playPromise.catch(function () {});
+                        }
+                    });
+                    return;
+                }
+
+                if (window.Hls && window.Hls.isSupported()) {
+                    var hls = new Hls({
+                        autoStartLoad: true,
+                        enableWorker: true,
+                        lowLatencyMode: false
+                    });
+                    hls.loadSource(hlsSrc);
+                    hls.attachMedia(video);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                        var playPromise = video.play();
+                        if (playPromise && playPromise.catch) {
+                            playPromise.catch(function () {});
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="assets/js/footer.js"></script>
+</body>
+
+</html>
