@@ -14675,4 +14675,143 @@ input.quickview__value--number {
   align-items: center;
 }
 
+.pz-video-section {
+  padding: 0;
+  background: transparent;
+}
+
+.pz-video-section--dark {
+  background: #101820;
+}
+
+.pz-video-section--embedded,
+.pz-video-section--hero {
+  background: transparent;
+}
+
+.pz-video-section--embedded {
+  padding: 20px 0 0;
+}
+
+.pz-video-section--hero {
+  padding: 0;
+}
+
+.pz-video-heading {
+  margin-bottom: 28px;
+}
+
+.pz-video-kicker {
+  color: var(--primary-color);
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.pz-video-title {
+  color: #101820;
+  font-size: 3.2rem;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+.pz-video-section--dark .pz-video-title {
+  color: #fff;
+}
+
+.pz-video-shell {
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.pz-video-shell video {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.pz-video-overlay {
+  background: rgba(128, 128, 128, 0.5);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.pz-video-content {
+  bottom: 42px;
+  color: #fff;
+  left: 50%;
+  max-width: 1140px;
+  padding: 0 30px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+}
+
+.pz-video-content__eyebrow {
+  color: rgba(255, 255, 255, 0.86);
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.pz-video-content__title {
+  color: #fff;
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 1.08;
+  margin-bottom: 0;
+  max-width: 720px;
+}
+
+.hero__slider--section .pz-video-shell {
+  aspect-ratio: 16 / 7;
+  width: 100%;
+}
+
+.product__details--section .pz-video-shell,
+.breadcrumb__section + .pz-video-section .pz-video-shell {
+  border-radius: 0;
+  margin: 0;
+}
+
+.breadcrumb__section + .pz-video-section {
+  padding: 0 0 60px;
+}
+
+@media only screen and (max-width: 767px) {
+  .pz-video-section {
+    padding: 0;
+  }
+
+  .pz-video-title {
+    font-size: 2.4rem;
+  }
+
+  .hero__slider--section .pz-video-shell {
+    aspect-ratio: 16 / 10;
+  }
+
+  .pz-video-content {
+    bottom: 24px;
+    padding: 0 20px;
+  }
+
+  .breadcrumb__section + .pz-video-section {
+    padding-bottom: 38px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
