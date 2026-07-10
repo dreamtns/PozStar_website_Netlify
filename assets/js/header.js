@@ -25,9 +25,9 @@
                                 <li class="header__menu--items"><a class="header__menu--link" href="about.html">About Us</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="#">Products</a>
                                     <ul class="header__sub--menu">
+                                        <li class="header__sub--menu__items"><a href="pozstar-pilot.html" class="header__sub--menu__link">PozStar Pilot</a></li>
                                         <li class="header__sub--menu__items"><a href="GNSS_Enclosures.html" class="header__sub--menu__link">GNSS Enclosures</a></li>
                                         <li class="header__sub--menu__items"><a href="GNSS_Smart_Antenna.html" class="header__sub--menu__link">GNSS Smart Antenna</a></li>
-                                        <li class="header__sub--menu__items"><a href="pozstar-pilot.html" class="header__sub--menu__link">PozStar Pilot</a></li>
                                     </ul>
                                 </li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="Partnership.html">Partnership</a></li>
@@ -56,9 +56,9 @@
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="about.html">About Us</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="products.html">Products</a>
                             <ul class="offcanvas__sub_menu">
+                                <li class="offcanvas__sub_menu_li"><a href="pozstar-pilot.html" class="offcanvas__sub_menu_item">PozStar Pilot</a></li>
                                 <li class="offcanvas__sub_menu_li"><a href="GNSS_Enclosures.html" class="offcanvas__sub_menu_item">GNSS Enclosures</a></li>
                                 <li class="offcanvas__sub_menu_li"><a href="GNSS_Smart_Antenna.html" class="offcanvas__sub_menu_item">GNSS Smart Antenna</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="pozstar-pilot.html" class="offcanvas__sub_menu_item">PozStar Pilot</a></li>
                             </ul>
                         </li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Partnership.html">Partnership</a></li>
