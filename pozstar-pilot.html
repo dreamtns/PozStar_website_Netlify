@@ -437,7 +437,7 @@
                     video.addEventListener('loadedmetadata', function () {
                         var playPromise = video.play();
                         if (playPromise && playPromise.catch) {
-                            playPromise.catch(function () {});
+                            playPromise.catch(function () { });
                         }
                     });
                     return;
@@ -454,7 +454,7 @@
                     hls.on(Hls.Events.MANIFEST_PARSED, function () {
                         var playPromise = video.play();
                         if (playPromise && playPromise.catch) {
-                            playPromise.catch(function () {});
+                            playPromise.catch(function () { });
                         }
                     });
                 }
