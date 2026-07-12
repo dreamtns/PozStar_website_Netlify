@@ -25,369 +25,423 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/poz.png">
     <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/header.js"></script>
-    <style>
-        .pilot-hero {
-            min-height: calc(100vh - 60px);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: end;
-            background: #111;
-        }
-
-        .pilot-video-bg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .pilot-hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(61, 61, 61, 0.68);
-        }
-
-        .pilot-hero__content {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            padding: 160px 0 54px;
-            color: #fff;
-        }
-
-        .pilot-hero__eyebrow,
-        .pilot-section__eyebrow {
-            color: #d72323;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: .08em;
-            text-transform: uppercase;
-        }
-
-        .pilot-hero__title {
-            color: #fff;
-            font-size: clamp(44px, 7vw, 94px);
-            line-height: .95;
-            margin: 18px 0 22px;
-        }
-
-        .pilot-hero__copy {
-            color: rgba(255, 255, 255, .86);
-            font-size: 20px;
-            line-height: 1.65;
-            max-width: 650px;
-        }
-
-        .pilot-hero__actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 34px;
-        }
-
-        .pilot-hero__button {
-            align-items: center;
-            border: 1px solid rgba(255, 255, 255, .44);
-            color: #fff;
-            display: inline-flex;
-            font-weight: 700;
-            min-height: 48px;
-            padding: 0 24px;
-            transition: all .2s ease;
-        }
-
-        .pilot-hero__button:hover {
-            background: #d72323;
-            border-color: #d72323;
-            color: #fff;
-        }
-
-        .pilot-hero__stats {
-            display: grid;
-            gap: 16px;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            margin-top: 70px;
-            max-width: 820px;
-        }
-
-        .pilot-hero__stat {
-            border-top: 1px solid rgba(255, 255, 255, .28);
-            padding-top: 18px;
-        }
-
-        .pilot-hero__stat strong {
-            color: #fff;
-            display: block;
-            font-size: 22px;
-            margin-bottom: 6px;
-        }
-
-        .pilot-hero__stat span {
-            color: rgba(255, 255, 255, .72);
-            font-size: 14px;
-        }
-
-        .pilot-section {
-            padding: 92px 0;
-        }
-
-        .pilot-section--soft {
-            background: #f7f9fc;
-        }
-
-        .pilot-section__title {
-            color: #101820;
-            font-size: clamp(32px, 4vw, 54px);
-            line-height: 1.08;
-            margin: 12px 0 18px;
-        }
-
-        .pilot-section__copy {
-            color: #5f6772;
-            font-size: 17px;
-            line-height: 1.8;
-        }
-
-        .pilot-feature-grid {
-            display: grid;
-            gap: 22px;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            margin-top: 42px;
-        }
-
-        .pilot-feature {
-            background: #fff;
-            border: 1px solid #e7edf4;
-            border-radius: 8px;
-            padding: 28px;
-        }
-
-        .pilot-feature h3 {
-            color: #101820;
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .pilot-feature p {
-            color: #69717c;
-            line-height: 1.75;
-            margin: 0;
-        }
-
-        .pilot-workflow {
-            display: grid;
-            gap: 26px;
-            grid-template-columns: .9fr 1.1fr;
-            align-items: center;
-        }
-
-        .pilot-workflow__image {
-            border-radius: 8px;
-            box-shadow: 0 24px 60px rgba(16, 24, 32, .14);
-            width: 100%;
-        }
-
-        .pilot-steps {
-            display: grid;
-            gap: 18px;
-        }
-
-        .pilot-step {
-            border-left: 3px solid #d72323;
-            padding-left: 20px;
-        }
-
-        .pilot-step h3 {
-            color: #101820;
-            font-size: 21px;
-            margin-bottom: 8px;
-        }
-
-        .pilot-step p {
-            color: #69717c;
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        .pilot-video-panel {
-            position: relative;
-            overflow: hidden;
-            min-height: 470px;
-            display: flex;
-            align-items: center;
-            background: #111;
-        }
-
-        .pilot-video-panel .pilot-video-bg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .pilot-video-panel::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(61, 61, 61, 0.68);
-        }
-
-        .pilot-video-panel__content {
-            color: #fff;
-            position: relative;
-            z-index: 1;
-        }
-
-        .pilot-video-panel__content h2 {
-            color: #fff;
-            font-size: clamp(34px, 5vw, 64px);
-            line-height: 1.05;
-            margin-bottom: 16px;
-            max-width: 760px;
-        }
-
-        .pilot-video-panel__content p {
-            color: rgba(255, 255, 255, .84);
-            font-size: 18px;
-            line-height: 1.75;
-            max-width: 680px;
-        }
-
-        @media (max-width: 991px) {
-
-            .pilot-feature-grid,
-            .pilot-workflow,
-            .pilot-hero__stats {
-                grid-template-columns: 1fr;
-            }
-
-            .pilot-hero {
-                min-height: 760px;
-            }
-        }
-
-        @media (max-width: 575px) {
-            .pilot-hero__content {
-                padding-top: 110px;
-            }
-
-            .pilot-hero__copy,
-            .pilot-video-panel__content p {
-                font-size: 16px;
-            }
-
-            .pilot-section {
-                padding: 64px 0;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5BK2KN4" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe class="gtm-noscript-frame" src="https://www.googletagmanager.com/ns.html?id=GTM-K5BK2KN4"
+            height="0" width="0"></iframe></noscript>
     <div id="header-container"></div>
     <main class="main__content_wrapper">
         <section class="pilot-hero">
             <video class="pilot-video-bg" autoplay muted loop playsinline preload="metadata"
                 data-hls-src="assets/videos/pozstar-pilot-hls/playlist.m3u8"></video>
             <div class="pilot-hero__content">
+                <div class="container-fluid px-0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-9">
+                                <span class="pilot-hero__eyebrow">PozStar Pilot</span>
+                                <h1 class="pilot-hero__title">Machine guidance for precise field work.</h1>
+                                <p class="pilot-hero__copy">PozStar Pilot brings RTK GNSS positioning, operator
+                                    guidance, and field-ready software into one workflow for construction, surveying,
+                                    and site positioning teams.</p>
+                                <div class="pilot-hero__actions">
+                                    <a class="pilot-hero__button pilot-hero__button--primary"
+                                        href="https://www.youtube.com/@PozStarPilot" target="_blank" rel="noopener">
+                                        <i class="fa fa-play-circle" aria-hidden="true"></i> Watch Pilot Videos
+                                    </a>
+                                    <a class="pilot-hero__button" href="contact.html">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> Contact Sales
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3 pilot-hero__stats">
+                            <div class="col-md-4">
+                                <div class="pilot-hero__stat">
+                                    <strong>RTK GNSS</strong>
+                                    <span>Centimeter-level positioning workflows</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pilot-hero__stat">
+                                    <strong>Field Software</strong>
+                                    <span>Clear guidance for daily site tasks</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pilot-hero__stat">
+                                    <strong>Machine Ready</strong>
+                                    <span>Built for operators, surveyors, and crews</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-pilot" class="pilot-content-section pilot-content-section--white">
+            <div class="container-fluid px-0">
                 <div class="container">
-                    <span class="pilot-hero__eyebrow">PozStar Pilot</span>
-                    <h1 class="pilot-hero__title">Machine guidance for precise field work.</h1>
-                    <p class="pilot-hero__copy">PozStar Pilot brings RTK GNSS positioning, operator guidance, and
-                        field-ready software into one workflow for construction, surveying, and site positioning teams.
-                    </p>
-                    <div class="pilot-hero__actions">
-                        <a class="pilot-hero__button" href="https://www.youtube.com/@PozStarPilot" target="_blank"
-                            rel="noopener">Watch Pilot Videos</a>
-                        <a class="pilot-hero__button" href="contact.html">Contact Sales</a>
+                    <div class="row align-items-end mb-4 mb-lg-5">
+                        <div class="col-lg-8">
+                            <span class="pilot-section__eyebrow">Why PozStar Pilot?</span>
+                            <h2 class="pilot-section__title">Four powerful differentiators. Maximum value.</h2>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="pilot-section__copy mb-0">A field-ready guidance system designed around fast
+                                setup, reliable positioning, and responsive operation.</p>
+                        </div>
                     </div>
-                    <div class="pilot-hero__stats">
-                        <div class="pilot-hero__stat">
-                            <strong>RTK GNSS</strong>
-                            <span>Centimeter-level positioning workflows</span>
+                    <div class="row g-4">
+                        <div class="col-sm-6 col-xl-3">
+                            <article class="pilot-diff-item h-100">
+                                <div class="pilot-diff-icon"><i class="fa fa-wifi" aria-hidden="true"></i></div>
+                                <h3>100% Wireless</h3>
+                                <p>No drilling, cables, or machine modification. Wireless GNSS and IMU make installation
+                                    quick and clean.</p>
+                            </article>
                         </div>
-                        <div class="pilot-hero__stat">
-                            <strong>Field Software</strong>
-                            <span>Clear guidance for daily site tasks</span>
+                        <div class="col-sm-6 col-xl-3">
+                            <article class="pilot-diff-item h-100">
+                                <div class="pilot-diff-icon pilot-diff-icon--red"><i class="fa fa-crosshairs"
+                                        aria-hidden="true"></i></div>
+                                <h3>Centimeter Precision</h3>
+                                <p>Advanced RTK GNSS delivers dependable centimeter-level positioning in challenging
+                                    field conditions.</p>
+                            </article>
                         </div>
-                        <div class="pilot-hero__stat">
-                            <strong>Machine Ready</strong>
-                            <span>Built for operators, surveyors, and crews</span>
+                        <div class="col-sm-6 col-xl-3">
+                            <article class="pilot-diff-item h-100">
+                                <div class="pilot-diff-icon pilot-diff-icon--teal"><img
+                                        src="assets/img/Pilot/Real-time icon.png" alt=""></div>
+                                <h3>Real-Time Guidance</h3>
+                                <p>Low-latency guidance gives operators smooth, responsive feedback for productive daily
+                                    work.</p>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <article class="pilot-diff-item h-100">
+                                <div class="pilot-diff-icon pilot-diff-icon--orange"><img
+                                        src="assets/img/Pilot/Stopwatch 30min.png" alt=""></div>
+                                <h3>Ready in 30 Minutes</h3>
+                                <p>Install, configure, and begin working in about 30 minutes to keep machine downtime to
+                                    a minimum.</p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-3 pilot-media-gallery">
+                        <div class="col-lg-7">
+                            <figure class="pilot-media-card pilot-media-card--wide h-100">
+                                <img src="assets/img/Pilot/p5_on_devlon.png" alt="Excavator using PozStar guidance">
+                                <figcaption>Centimeter-level accuracy with real-time 3D machine guidance</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-5 col-lg-2">
+                            <figure class="pilot-media-card pilot-media-card--portrait h-100">
+                                <img src="assets/img/Pilot/App.png" alt="PozStar Pilot guidance display">
+                                <figcaption>Live operator guidance</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-7 col-lg-3">
+                            <figure class="pilot-media-card pilot-media-card--screen h-100">
+                                <img src="assets/img/Pilot/PozStar App.png" alt="PozStar Pilot application interface">
+                                <figcaption>Purpose-built field software</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="pilot-section pilot-section--soft">
-            <div class="container">
-                <div class="row align-items-end">
-                    <div class="col-lg-7">
-                        <span class="pilot-section__eyebrow">Built for the site</span>
-                        <h2 class="pilot-section__title">Keep machines, survey data, and crews aligned.</h2>
+        <section id="pilot-mobility" class="pilot-content-section pilot-content-section--soft">
+            <div class="container-fluid px-0">
+                <div class="container">
+                    <div class="row mb-4 mb-lg-5">
+                        <div class="col-lg-8">
+                            <span class="pilot-section__eyebrow">Fast deployment</span>
+                            <h2 class="pilot-section__title">Easy to demo. Easy to move. Ready to work.</h2>
+                        </div>
                     </div>
-                    <div class="col-lg-5">
-                        <p class="pilot-section__copy">Inspired by modern machine-control workflows, PozStar Pilot
-                            focuses on making position, design, and progress information easy to understand from the cab
-                            and in the field.</p>
+                    <div class="row g-4 align-items-stretch">
+                        <div class="col-md-6 col-xl-3 order-2 order-xl-1">
+                            <aside class="pilot-side-card h-100">
+                                <div class="pilot-side-card__header">For Dealers</div>
+                                <div class="pilot-side-list">
+                                    <div class="pilot-side-item">
+                                        <span class="pilot-circle-icon"><img
+                                                src="assets/img/Pilot/Demo ready icon.png" alt=""></span>
+                                        <div><h3>Live Demo Ready</h3><p>Ready to demonstrate in just 30 minutes</p></div>
+                                    </div>
+                                    <div class="pilot-side-item">
+                                        <span class="pilot-circle-icon"><img
+                                                src="assets/img/Pilot/Stopwatch 30min blue icon.png" alt=""></span>
+                                        <div><h3>30-Minute Setup</h3><p>Install and start working in about 30 minutes</p></div>
+                                    </div>
+                                    <div class="pilot-side-item">
+                                        <span class="pilot-circle-icon"><img src="assets/img/Pilot/Rental icon.png"
+                                                alt=""></span>
+                                        <div><h3>Ideal for Rental</h3><p>Perfect for demonstrations and short-term rental</p></div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-xl-6 order-1 order-xl-2">
+                            <div class="pilot-center-demo h-100">
+                                <span class="pilot-center-demo__eyebrow">One receiver</span>
+                                <h3>Multiple Excavators</h3>
+                                <p>Transfer the system between machines for maximum utilization.</p>
+                                <img class="pilot-network-image" src="assets/img/Pilot/pilot_netowrk.png"
+                                    alt="One PozStar receiver used across multiple excavators">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 order-3">
+                            <aside class="pilot-side-card h-100">
+                                <div class="pilot-side-card__header">For Contractors</div>
+                                <div class="pilot-side-list">
+                                    <div class="pilot-side-item">
+                                        <span class="pilot-circle-icon"><img
+                                                src="assets/img/Pilot/Machine transfer icon.png" alt=""></span>
+                                        <div><h3>Easy Transfer</h3><p>Move between excavators in minutes</p></div>
+                                    </div>
+                                    <div class="pilot-side-item">
+                                        <span class="pilot-circle-icon"><img
+                                                src="assets/img/Pilot/lower investment icon.png" alt=""></span>
+                                        <div><h3>Lower Investment</h3><p>One system for multiple excavators</p></div>
+                                    </div>
+                                    <div class="pilot-side-item">
+                                        <span class="pilot-circle-icon"><img src="assets/img/Pilot/Maximum icon.png"
+                                                alt=""></span>
+                                        <div><h3>Maximum Utilization</h3><p>Increase equipment use and return on investment</p></div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
                     </div>
-                </div>
-                <div class="pilot-feature-grid">
-                    <article class="pilot-feature">
-                        <h3>Operator guidance</h3>
-                        <p>Give the operator clear visual direction for grading, excavation, alignment, and repeated
-                            positioning tasks.</p>
-                    </article>
-                    <article class="pilot-feature">
-                        <h3>Survey-grade inputs</h3>
-                        <p>Use PozStar RTK receivers and field software as the positioning foundation for reliable,
-                            repeatable site measurements.</p>
-                    </article>
-                    <article class="pilot-feature">
-                        <h3>Field-to-office flow</h3>
-                        <p>Support the everyday loop between plans, machine work, checks, and reporting without slowing
-                            crews down.</p>
-                    </article>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-5 g-3 mt-4">
+                        <div class="col">
+                            <div class="pilot-benefit h-100"><span class="pilot-circle-icon"><img
+                                        src="assets/img/Pilot/Easy installation red.png" alt=""></span><div><h3>Easy Installation</h3><p>No drilling or cables</p></div></div>
+                        </div>
+                        <div class="col">
+                            <div class="pilot-benefit h-100"><span class="pilot-circle-icon"><img
+                                        src="assets/img/Pilot/Wieless red.png" alt=""></span><div><h3>100% Wireless</h3><p>Reliable and cable-free</p></div></div>
+                        </div>
+                        <div class="col">
+                            <div class="pilot-benefit h-100"><span class="pilot-circle-icon"><img
+                                        src="assets/img/Pilot/Stopwatch 30min red.png" alt=""></span><div><h3>30 Minutes</h3><p>From installation to work</p></div></div>
+                        </div>
+                        <div class="col">
+                            <div class="pilot-benefit h-100"><span class="pilot-circle-icon"><img
+                                        src="assets/img/Pilot/demo ready red.png" alt=""></span><div><h3>Move in Minutes</h3><p>Fast machine transfer</p></div></div>
+                        </div>
+                        <div class="col">
+                            <div class="pilot-benefit h-100"><span class="pilot-circle-icon"><img
+                                        src="assets/img/Pilot/receiver red.png" alt=""></span><div><h3>One Receiver</h3><p>Two field applications</p></div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="pilot-section">
-            <div class="container">
-                <div class="pilot-workflow">
-                    <img class="pilot-workflow__image" src="assets/img/other/guidance2.jpg"
-                        alt="Machine guidance field workflow">
-                    <div>
-                        <span class="pilot-section__eyebrow">Pilot workflow</span>
-                        <h2 class="pilot-section__title">From GNSS fix to confident machine movement.</h2>
-                        <div class="pilot-steps">
-                            <div class="pilot-step">
-                                <h3>Position</h3>
-                                <p>Start with a fast RTK fix and keep the machine located accurately on the jobsite.</p>
-                            </div>
-                            <div class="pilot-step">
-                                <h3>Guide</h3>
-                                <p>Translate positioning data into practical on-screen guidance so the operator can work
-                                    to the intended line, level, or design.</p>
-                            </div>
-                            <div class="pilot-step">
-                                <h3>Verify</h3>
-                                <p>Use the same positioning ecosystem to check progress, reduce rework, and keep field
-                                    decisions grounded in measured data.</p>
+        <section id="pilot-applications" class="pilot-content-section pilot-content-section--white">
+            <div class="container-fluid px-0">
+                <div class="container">
+                    <div class="row align-items-end mb-4 mb-lg-5">
+                        <div class="col-lg-8">
+                            <span class="pilot-section__eyebrow">Applications</span>
+                            <h2 class="pilot-section__title">One receiver. Two applications.</h2>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="pilot-section__copy mb-0">Use the same positioning platform for machine guidance
+                                or expand it into a precision survey rover.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5">
+                            <article class="pilot-app-card pilot-app-card--excavator">
+                                <h3 class="visually-hidden">Excavator Guidance</h3>
+                                <img class="pilot-app-card__composite" src="assets/img/Pilot/p5_on_declon.png"
+                                    alt="Excavator guidance for level, trenching, slope, land grading, and field ridge work">
+                            </article>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="pilot-application-bridge">
+                                <span class="pilot-application-bridge__badge">PozStar</span>
+                                <h3>P5</h3>
+                                <p>GNSS Receiver</p>
+                                <ul>
+                                    <li>Centimeter accuracy</li>
+                                    <li>Multi-constellation</li>
+                                    <li>Rugged construction</li>
+                                    <li>Bluetooth and Wi-Fi</li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="col-lg-5">
+                            <article class="pilot-app-card pilot-app-card--survey">
+                                <h3 class="visually-hidden">Survey Rover</h3>
+                                <img class="pilot-app-card__composite" src="assets/img/Pilot/Survey_rover.png"
+                                    alt="Survey rover for surveying, stakeout, topographic survey, CAD checks, and data collection">
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pilot-configuration" class="pilot-content-section pilot-content-section--soft system_configuration">
+            <div class="container-fluid px-0">
+                <div class="container">
+                    <div class="row mb-4 mb-lg-5">
+                        <div class="col-lg-8">
+                            <span class="pilot-section__eyebrow">System Configuration</span>
+                            <h2 class="pilot-section__title">Core components and optional modules.</h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-xl-8">
+                            <div class="system-config__panel h-100">
+                                <div class="system-config__panel-header">
+                                    <span class="system-config__mark"><i class="fa fa-star" aria-hidden="true"></i></span>
+                                    <span>Core Components <small>4 essential components</small></span>
+                                </div>
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 system-config__cards">
+                                    <div class="col">
+                                        <article class="system-config-card h-100">
+                                            <span class="system-config-card__number">1</span>
+                                            <div class="system-config-card__image"><img src="assets/img/Pilot/P5.png"
+                                                    alt="PozStar P5 receiver"></div>
+                                            <div class="system-config-card__body">
+                                                <h3>PozStar P5</h3><div class="system-config-card__subtitle">Smart GNSS Receiver</div>
+                                                <ul><li>Excavator-grade IMU</li><li>Real-time bucket tracking</li><li>High-precision positioning</li></ul>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col">
+                                        <article class="system-config-card h-100">
+                                            <span class="system-config-card__number">2</span>
+                                            <div class="system-config-card__image"><img
+                                                    src="assets/img/Pilot/tablet_bracket.png" alt="Tablet and bracket"></div>
+                                            <div class="system-config-card__body">
+                                                <h3>Tablet &amp; Bracket</h3><div class="system-config-card__subtitle">Machine Guidance Display</div>
+                                                <ul><li>CAD drawing visualization</li><li>Optimized for construction</li><li>Real-time CAD display</li></ul>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col">
+                                        <article class="system-config-card h-100">
+                                            <span class="system-config-card__number">3</span>
+                                            <div class="system-config-card__image"><img
+                                                    src="assets/img/Pilot/Wireless_IMU_module.png" alt="Wireless IMU module"></div>
+                                            <div class="system-config-card__body">
+                                                <h3>Wireless IMU Module</h3><div class="system-config-card__subtitle">Solar Charging Technology</div>
+                                                <ul><li>Cable-free installation</li><li>Minimal maintenance</li><li>Solar-powered operation</li></ul>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col">
+                                        <article class="system-config-card h-100">
+                                            <span class="system-config-card__number">4</span>
+                                            <div class="system-config-card__image"><img src="assets/img/Pilot/Rugged_case.png"
+                                                    alt="Rugged carrying case"></div>
+                                            <div class="system-config-card__body">
+                                                <h3>Rugged Carrying Case</h3><div class="system-config-card__subtitle">Impact-resistant construction</div>
+                                                <ul><li>Dust and moisture protection</li><li>Convenient transport</li><li>Custom foam interior</li></ul>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="system-config__panel system-config__panel--optional h-100">
+                                <div class="system-config__panel-header">
+                                    <span class="system-config__mark"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                    <span>Optional Modules <small>Expand your system</small></span>
+                                </div>
+                                <div class="row row-cols-1 row-cols-sm-2 g-3 system-config__cards">
+                                    <div class="col">
+                                        <article class="system-config-card h-100">
+                                            <div class="system-config-card__image"><img
+                                                    src="assets/img/Pilot/Survey_rover_kit.png" alt="Survey rover kit"></div>
+                                            <div class="system-config-card__body">
+                                                <h3>Survey Rover Kit</h3><div class="system-config-card__subtitle">Expand to precision survey</div>
+                                                <ul><li>Survey rover conversion</li><li>PozPad survey software</li><li>Stakeout and CAD workflows</li></ul>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="col">
+                                        <article class="system-config-card h-100">
+                                            <div class="system-config-card__image"><img src="assets/img/Pilot/S5.png"
+                                                    alt="PozStar S5 base station"></div>
+                                            <div class="system-config-card__body">
+                                                <h3>PozStar S5</h3><div class="system-config-card__subtitle">Precision Base Station</div>
+                                                <ul><li>Independent RTK coverage</li><li>Stable RTK corrections</li><li>Reliable field performance</li></ul>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pilot-benefits" class="pilot-content-section pilot-content-section--white">
+            <div class="container-fluid px-0">
+                <div class="container">
+                    <div class="row mb-4 mb-lg-5">
+                        <div class="col-lg-8">
+                            <span class="pilot-section__eyebrow">Business Benefits</span>
+                            <h2 class="pilot-section__title">Maximize productivity and profitability.</h2>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-xl-3">
+                            <article class="pilot-benefit-card pilot-benefit-card--blue h-100">
+                                <div class="pilot-benefit-card__top"><span class="pilot-diff-icon"><i
+                                            class="fa fa-crosshairs" aria-hidden="true"></i></span><div><h3>Precision</h3><p>Consistent excavation quality</p></div></div>
+                                <ul><li>Centimeter-level positioning</li><li>Reduce rework and over-excavation</li><li>Consistent digging accuracy</li></ul>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="pilot-benefit-card pilot-benefit-card--orange h-100">
+                                <div class="pilot-benefit-card__top"><span class="pilot-diff-icon pilot-diff-icon--orange"><img
+                                            src="assets/img/Pilot/Productivity_orange.png" alt=""></span><div><h3>Productivity</h3><p>Complete projects faster</p></div></div>
+                                <ul><li>Faster excavation workflow</li><li>Reduced surveying time</li><li>Higher operator efficiency</li></ul>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="pilot-benefit-card pilot-benefit-card--green h-100">
+                                <div class="pilot-benefit-card__top"><span class="pilot-diff-icon pilot-diff-icon--green"><img
+                                            src="assets/img/Pilot/Cost efficiency green.png" alt=""></span><div><h3>Cost Efficiency</h3><p>Reduce operating costs</p></div></div>
+                                <ul><li>Lower fuel and material waste</li><li>Less downtime</li><li>Reduced labor requirements</li></ul>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="pilot-benefit-card pilot-benefit-card--purple h-100">
+                                <div class="pilot-benefit-card__top"><span class="pilot-diff-icon pilot-diff-icon--purple"><img
+                                            src="assets/img/Pilot/Adapt to any jobsite.png" alt=""></span><div><h3>Flexibility</h3><p>Adapt to any jobsite</p></div></div>
+                                <ul><li>Easy installation</li><li>Quick machine transfer</li><li>One system for multiple excavators</li></ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-5 g-3 mt-4">
+                        <div class="col"><div class="pilot-metric h-100"><strong>80%</strong><span>Less surveying time</span></div></div>
+                        <div class="col"><div class="pilot-metric pilot-metric--orange h-100"><strong>40%</strong><span>Less rework and material waste</span></div></div>
+                        <div class="col"><div class="pilot-metric pilot-metric--green h-100"><strong>40%</strong><span>Lower fuel consumption</span></div></div>
+                        <div class="col"><div class="pilot-metric pilot-metric--purple h-100"><strong>40%</strong><span>Higher equipment utilization</span></div></div>
+                        <div class="col"><div class="pilot-metric h-100"><strong>70%</strong><span>Faster installation and transfer</span></div></div>
                     </div>
                 </div>
             </div>
@@ -396,28 +450,38 @@
         <section class="pilot-video-panel">
             <video class="pilot-video-bg" autoplay muted loop playsinline preload="metadata"
                 data-hls-src="assets/videos/pozstar-pilot-hls/playlist.m3u8"></video>
-            <div class="container">
-                <div class="pilot-video-panel__content">
-                    <h2>See PozStar Pilot in motion.</h2>
-                    <p>The page uses a muted, looping YouTube background in the same spirit as Unicontrol's motion-led
-                        presentation, while linking visitors to the PozStar Pilot channel for more demonstrations.</p>
-                    <a class="pilot-hero__button" href="https://www.youtube.com/@PozStarPilot" target="_blank"
-                        rel="noopener">Open YouTube Channel</a>
+            <div class="container-fluid px-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="pilot-video-panel__content">
+                                <h2>See PozStar Pilot in motion.</h2>
+                                <p>Watch precise positioning and machine guidance come together in real field
+                                    operations.</p>
+                                <a class="pilot-hero__button pilot-hero__button--primary"
+                                    href="https://www.youtube.com/@PozStarPilot" target="_blank" rel="noopener">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i> Open YouTube Channel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="pilot-section pilot-section--soft">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <span class="pilot-section__eyebrow">Pilot ecosystem</span>
-                        <h2 class="pilot-section__title">Hardware and software working together.</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="pilot-section__copy">PozStar Pilot connects positioning hardware, operator displays,
-                            controllers, and field software for machine guidance, stakeout, measurement, and field
-                            verification workflows.</p>
+            <div class="container-fluid px-0">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-6">
+                            <span class="pilot-section__eyebrow">Pilot ecosystem</span>
+                            <h2 class="pilot-section__title">Hardware and software working together.</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="pilot-section__copy mb-0">PozStar Pilot connects positioning hardware, operator
+                                displays, controllers, and field software for machine guidance, stakeout, measurement,
+                                and field verification workflows.</p>
+                        </div>
                     </div>
                 </div>
             </div>
