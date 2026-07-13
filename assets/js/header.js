@@ -91,7 +91,7 @@
                     </div>
                     <div class="main__logo">
                         <h1 class="main__logo--title">
-                            <a class="main__logo--link" href="Ko/index.html"><img class="main__logo--img" src="/../assets/img/logo/Pozstar_changed.svg" alt="PozStar Logo" height="30" width="140"></a>
+                            <a class="main__logo--link" href="Ko/index.html"><img class="main__logo--img" src="../assets/img/logo/Pozstar_changed.svg" alt="PozStar Logo" height="30" width="140"></a>
                         </h1>
                     </div>
                     <div class="header__menu d-none d-lg-block">
@@ -126,7 +126,7 @@
         <div class="offcanvas-header" tabindex="-1">
             <div class="offcanvas__inner">
                 <div class="offcanvas__logo">
-                    <a class="offcanvas__logo_link" href="Ko/index.html"><img src="assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
+                    <a class="offcanvas__logo_link" href="Ko/index.html"><img src="../assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
                     <button class="offcanvas__close--btn" data-offcanvas>\uB2EB\uAE30</button>
                 </div>
                 <nav class="offcanvas__menu">
