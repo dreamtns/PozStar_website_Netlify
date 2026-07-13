@@ -3,7 +3,17 @@
     var loadedScripts = {};
 
     function getBasePath() {
-        return /(^|\/)Ko(\/|$)/.test(window.location.pathname) ? '../' : '';
+        var pathname = window.location.pathname.replace(/\\/g, '/');
+        var depth = 0;
+
+        if (/(^|\/)Ko(\/|$)/.test(pathname)) {
+            depth += 1;
+        }
+        if (/(^|\/)newsletters(\/|$)/.test(pathname)) {
+            depth += 1;
+        }
+
+        return '../'.repeat(depth);
     }
 
     function localizeUrl(url, basePath) {

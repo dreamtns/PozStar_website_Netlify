@@ -91,26 +91,26 @@
                     </div>
                     <div class="main__logo">
                         <h1 class="main__logo--title">
-                            <a class="main__logo--link" href="index.html"><img class="main__logo--img" src="assets/img/logo/Pozstar_changed.svg" alt="PozStar Logo" height="30" width="140"></a>
+                            <a class="main__logo--link" href="Ko/index.html"><img class="main__logo--img" src="/../assets/img/logo/Pozstar_changed.svg" alt="PozStar Logo" height="30" width="140"></a>
                         </h1>
                     </div>
                     <div class="header__menu d-none d-lg-block">
                         <nav class="header__menu--navigation">
                             <ul class="d-flex">
-                                <li class="header__menu--items"><a class="header__menu--link" href="solutions.html">\uD68C\uC0AC \uC18C\uAC1C</a></li>
-                                <li class="header__menu--items"><a class="header__menu--link" href="products.html">\uC81C\uD488 \uC18C\uAC1C</a>
+                                <li class="header__menu--items"><a class="header__menu--link" href="Ko/about.html">\uD68C\uC0AC \uC18C\uAC1C</a></li>
+                                <li class="header__menu--items"><a class="header__menu--link" href="Ko/products.html">\uC81C\uD488 \uC18C\uAC1C</a>
                                     <ul class="header__sub--menu">
-                                        <li class="header__sub--menu__items"><a href="P5.html" class="header__sub--menu__link">PozStar P5</a></li>
-                                        <li class="header__sub--menu__items"><a href="S5.html" class="header__sub--menu__link">PozStar S5</a></li>
-                                        <li class="header__sub--menu__items"><a href="android_software.html" class="header__sub--menu__link">PozPad (Android App)</a></li>
-                                        <li class="header__sub--menu__items"><a href="controller.html" class="header__sub--menu__link">PozStar Controller</a></li>
-                                        <li class="header__sub--menu__items"><a href="pozstar-pilot.html" class="header__sub--menu__link">PozStar Pilot</a></li>
+                                        <li class="header__sub--menu__items"><a href="Ko/P5.html" class="header__sub--menu__link">PozStar P5</a></li>
+                                        <li class="header__sub--menu__items"><a href="Ko/S5.html" class="header__sub--menu__link">PozStar S5</a></li>
+                                        <li class="header__sub--menu__items"><a href="Ko/android_software.html" class="header__sub--menu__link">PozPad (Android App)</a></li>
+                                        <li class="header__sub--menu__items"><a href="Ko/controller.html" class="header__sub--menu__link">PozStar Controller</a></li>
+                                        <li class="header__sub--menu__items"><a href="Ko/pozstar-pilot.html" class="header__sub--menu__link">PozStar Pilot</a></li>
                                         <li class="header__sub--menu__items"><a href="https://blog.naver.com/pozstargnss" class="header__sub--menu__link">\uB0A9\uD488\uAE30 \uBC14\uB85C\uAC00\uAE30</a></li>
                                     </ul>
                                 </li>
-                                <li class="header__menu--items"><a class="header__menu--link" href="Partnership.html">\uD30C\uD2B8\uB108\uC2ED</a></li>
-                                <li class="header__menu--items"><a class="header__menu--link" href="news.html">\uB274\uC2A4</a></li>
-                                <li class="header__menu--items"><a class="header__menu--link" href="contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
+                                <li class="header__menu--items"><a class="header__menu--link" href="Ko/Partnership.html">\uD30C\uD2B8\uB108\uC2ED</a></li>
+                                <li class="header__menu--items"><a class="header__menu--link" href="Ko/news.html">\uB274\uC2A4</a></li>
+                                <li class="header__menu--items"><a class="header__menu--link" href="Ko/contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="#">\uC5B8\uC5B4</a>
                                     <ul class="header__sub--menu">
                                         <li class="header__sub--menu__items"><a href="index.html" class="header__sub--menu__link">English</a></li>
@@ -126,25 +126,25 @@
         <div class="offcanvas-header" tabindex="-1">
             <div class="offcanvas__inner">
                 <div class="offcanvas__logo">
-                    <a class="offcanvas__logo_link" href="index.html"><img src="assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
+                    <a class="offcanvas__logo_link" href="Ko/index.html"><img src="assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
                     <button class="offcanvas__close--btn" data-offcanvas>\uB2EB\uAE30</button>
                 </div>
                 <nav class="offcanvas__menu">
                     <ul class="offcanvas__menu_ul">
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="solutions.html">\uD68C\uC0AC \uC18C\uAC1C</a></li>
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="products.html">\uC81C\uD488 \uC18C\uAC1C</a>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/about.html">\uD68C\uC0AC \uC18C\uAC1C</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/products.html">\uC81C\uD488 \uC18C\uAC1C</a>
                             <ul class="offcanvas__sub_menu">
-                                <li class="offcanvas__sub_menu_li"><a href="P5.html" class="offcanvas__sub_menu_item">PozStar P5</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="S5.html" class="offcanvas__sub_menu_item">PozStar S5</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="android_software.html" class="offcanvas__sub_menu_item">PozPad (Android App)</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="controller.html" class="offcanvas__sub_menu_item">PozStar Controller</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="pozstar-pilot.html" class="offcanvas__sub_menu_item">PozStar Pilot</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="Ko/P5.html" class="offcanvas__sub_menu_item">PozStar P5</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="Ko/S5.html" class="offcanvas__sub_menu_item">PozStar S5</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="Ko/android_software.html" class="offcanvas__sub_menu_item">PozPad (Android App)</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="Ko/controller.html" class="offcanvas__sub_menu_item">PozStar Controller</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="Ko/pozstar-pilot.html" class="offcanvas__sub_menu_item">PozStar Pilot</a></li>
                                 <li class="offcanvas__sub_menu_li"><a href="https://blog.naver.com/pozstargnss" class="offcanvas__sub_menu_item">\uB0A9\uD488\uAE30 \uBC14\uB85C\uAC00\uAE30</a></li>
                             </ul>
                         </li>
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Partnership.html">\uD30C\uD2B8\uB108\uC2ED</a></li>
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="news.html">\uB274\uC2A4</a></li>
-                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/Partnership.html">\uD30C\uD2B8\uB108\uC2ED</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/news.html">\uB274\uC2A4</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="#">\uC5B8\uC5B4</a>
                             <ul class="offcanvas__sub_menu">
                                 <li class="offcanvas__sub_menu_li"><a href="index.html" class="offcanvas__sub_menu_item">English</a></li>
@@ -162,7 +162,17 @@
     }
 
     function getBasePath() {
-        return isKoreanPage() ? '../' : '';
+        var pathname = window.location.pathname.replace(/\\/g, '/');
+        var depth = 0;
+
+        if (/(^|\/)Ko(\/|$)/.test(pathname)) {
+            depth += 1;
+        }
+        if (/(^|\/)newsletters(\/|$)/.test(pathname)) {
+            depth += 1;
+        }
+
+        return '../'.repeat(depth);
     }
 
     function localizeUrl(url, basePath) {

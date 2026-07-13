@@ -69,8 +69,38 @@
 </url>
 <url>
   <loc>http://www.pozstar.com/news.html</loc>
-  <lastmod>2024-04-15T06:58:49+00:00</lastmod>
+  <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pozstar.com/newsletters/pilot.html</loc>
+  <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.pozstar.com/newsletters/ppp.html</loc>
+  <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.pozstar.com/newsletters/radiotest.html</loc>
+  <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.pozstar.com/newsletters/fta.html</loc>
+  <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.pozstar.com/newsletters/magazine.html</loc>
+  <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.pozstar.com/newsletters/case.html</loc>
+  <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.pozstar.comKo/products.html</loc>
