@@ -13,11 +13,11 @@
                         </a>
                     </div>
                     <div class="main__logo">
-                        <h1 class="main__logo--title">
-                            <a class="main__logo--link" href="index.html">
+                        <div class="main__logo--title">
+                            <a class="main__logo--link" href="/">
                                 <img class="main__logo--img" src="assets/img/logo/Pozstar_changed.svg" alt="PozStar Logo" height="30" width="140">
                             </a>
-                        </h1>
+                        </div>
                     </div>
                     <div class="header__menu d-none d-lg-block">
                         <nav class="header__menu--navigation">
@@ -25,9 +25,9 @@
                                 <li class="header__menu--items"><a class="header__menu--link" href="about.html">About Us</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="#">Products</a>
                                     <ul class="header__sub--menu">
-                                        <li class="header__sub--menu__items"><a href="pozstar-pilot.html" class="header__sub--menu__link">PozStar Pilot</a></li>
-                                        <li class="header__sub--menu__items"><a href="GNSS_Enclosures.html" class="header__sub--menu__link">GNSS Enclosures</a></li>
+                                        <li class="header__sub--menu__items"><a href="pozstar-pilot.html" class="header__sub--menu__link">Excavator Machine Guidance</a></li>
                                         <li class="header__sub--menu__items"><a href="GNSS_Smart_Antenna.html" class="header__sub--menu__link">GNSS Smart Antenna</a></li>
+                                        <li class="header__sub--menu__items"><a href="GNSS_Enclosures.html" class="header__sub--menu__link">GNSS Enclosures</a></li>
                                     </ul>
                                 </li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="Partnership.html">Partnership</a></li>
@@ -35,8 +35,8 @@
                                 <li class="header__menu--items"><a class="header__menu--link" href="contact.html">Contact</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="#">Language</a>
                                     <ul class="header__sub--menu">
-                                        <li class="header__sub--menu__items"><a href="index.html" class="header__sub--menu__link">English</a></li>
-                                        <li class="header__sub--menu__items"><a href="Ko/index.html" class="header__sub--menu__link">\uD55C\uAD6D\uC5B4</a></li>
+                                        <li class="header__sub--menu__items"><a href="/" class="header__sub--menu__link">English</a></li>
+                                        <li class="header__sub--menu__items"><a href="/Ko/" class="header__sub--menu__link">\uD55C\uAD6D\uC5B4</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -48,7 +48,7 @@
         <div class="offcanvas-header" tabindex="-1">
             <div class="offcanvas__inner">
                 <div class="offcanvas__logo">
-                    <a class="offcanvas__logo_link" href="index.html"><img src="assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
+                    <a class="offcanvas__logo_link" href="/"><img src="assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
                     <button class="offcanvas__close--btn" data-offcanvas>close</button>
                 </div>
                 <nav class="offcanvas__menu">
@@ -56,9 +56,9 @@
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="about.html">About Us</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="products.html">Products</a>
                             <ul class="offcanvas__sub_menu">
-                                <li class="offcanvas__sub_menu_li"><a href="pozstar-pilot.html" class="offcanvas__sub_menu_item">PozStar Pilot</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="GNSS_Enclosures.html" class="offcanvas__sub_menu_item">GNSS Enclosures</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="pozstar-pilot.html" class="offcanvas__sub_menu_item">Excavator Machine Guidance</a></li>
                                 <li class="offcanvas__sub_menu_li"><a href="GNSS_Smart_Antenna.html" class="offcanvas__sub_menu_item">GNSS Smart Antenna</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="GNSS_Enclosures.html" class="offcanvas__sub_menu_item">GNSS Enclosures</a></li>
                             </ul>
                         </li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Partnership.html">Partnership</a></li>
@@ -66,8 +66,8 @@
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="contact.html">Contact</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="#">Language</a>
                             <ul class="offcanvas__sub_menu">
-                                <li class="offcanvas__sub_menu_li"><a href="index.html" class="offcanvas__sub_menu_item">English</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="Ko/index.html" class="offcanvas__sub_menu_item">\uD55C\uAD6D\uC5B4</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="/" class="offcanvas__sub_menu_item">English</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="/Ko/" class="offcanvas__sub_menu_item">\uD55C\uAD6D\uC5B4</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -90,9 +90,9 @@
                         </a>
                     </div>
                     <div class="main__logo">
-                        <h1 class="main__logo--title">
-                            <a class="main__logo--link" href="Ko/index.html"><img class="main__logo--img" src="../assets/img/logo/Pozstar_changed.svg" alt="PozStar Logo" height="30" width="140"></a>
-                        </h1>
+                        <div class="main__logo--title">
+                            <a class="main__logo--link" href="/Ko/"><img class="main__logo--img" src="../assets/img/logo/Pozstar_changed.svg" alt="PozStar Logo" height="30" width="140"></a>
+                        </div>
                     </div>
                     <div class="header__menu d-none d-lg-block">
                         <nav class="header__menu--navigation">
@@ -104,7 +104,7 @@
                                         <li class="header__sub--menu__items"><a href="Ko/S5.html" class="header__sub--menu__link">PozStar S5</a></li>
                                         <li class="header__sub--menu__items"><a href="Ko/android_software.html" class="header__sub--menu__link">PozPad (Android App)</a></li>
                                         <li class="header__sub--menu__items"><a href="Ko/controller.html" class="header__sub--menu__link">PozStar Controller</a></li>
-                                        <li class="header__sub--menu__items"><a href="Ko/pozstar-pilot.html" class="header__sub--menu__link">PozStar Pilot</a></li>
+                                        <li class="header__sub--menu__items"><a href="/pozstar-pilot.html" class="header__sub--menu__link">Excavator Machine Guidance</a></li>
                                         <li class="header__sub--menu__items"><a href="https://blog.naver.com/pozstargnss" class="header__sub--menu__link">\uB0A9\uD488\uAE30 \uBC14\uB85C\uAC00\uAE30</a></li>
                                     </ul>
                                 </li>
@@ -113,8 +113,8 @@
                                 <li class="header__menu--items"><a class="header__menu--link" href="Ko/contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="#">\uC5B8\uC5B4</a>
                                     <ul class="header__sub--menu">
-                                        <li class="header__sub--menu__items"><a href="index.html" class="header__sub--menu__link">English</a></li>
-                                        <li class="header__sub--menu__items"><a href="Ko/index.html" class="header__sub--menu__link">\uD55C\uAD6D\uC5B4</a></li>
+                                        <li class="header__sub--menu__items"><a href="/" class="header__sub--menu__link">English</a></li>
+                                        <li class="header__sub--menu__items"><a href="/Ko/" class="header__sub--menu__link">\uD55C\uAD6D\uC5B4</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -126,7 +126,7 @@
         <div class="offcanvas-header" tabindex="-1">
             <div class="offcanvas__inner">
                 <div class="offcanvas__logo">
-                    <a class="offcanvas__logo_link" href="Ko/index.html"><img src="../assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
+                    <a class="offcanvas__logo_link" href="/Ko/"><img src="../assets/img/logo/Pozstar_Black.svg" alt="PozStar Logo"></a>
                     <button class="offcanvas__close--btn" data-offcanvas>\uB2EB\uAE30</button>
                 </div>
                 <nav class="offcanvas__menu">
@@ -138,7 +138,7 @@
                                 <li class="offcanvas__sub_menu_li"><a href="Ko/S5.html" class="offcanvas__sub_menu_item">PozStar S5</a></li>
                                 <li class="offcanvas__sub_menu_li"><a href="Ko/android_software.html" class="offcanvas__sub_menu_item">PozPad (Android App)</a></li>
                                 <li class="offcanvas__sub_menu_li"><a href="Ko/controller.html" class="offcanvas__sub_menu_item">PozStar Controller</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="Ko/pozstar-pilot.html" class="offcanvas__sub_menu_item">PozStar Pilot</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="/pozstar-pilot.html" class="offcanvas__sub_menu_item">Excavator Machine Guidance</a></li>
                                 <li class="offcanvas__sub_menu_li"><a href="https://blog.naver.com/pozstargnss" class="offcanvas__sub_menu_item">\uB0A9\uD488\uAE30 \uBC14\uB85C\uAC00\uAE30</a></li>
                             </ul>
                         </li>
@@ -147,8 +147,8 @@
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="#">\uC5B8\uC5B4</a>
                             <ul class="offcanvas__sub_menu">
-                                <li class="offcanvas__sub_menu_li"><a href="index.html" class="offcanvas__sub_menu_item">English</a></li>
-                                <li class="offcanvas__sub_menu_li"><a href="Ko/index.html" class="offcanvas__sub_menu_item">\uD55C\uAD6D\uC5B4</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="/" class="offcanvas__sub_menu_item">English</a></li>
+                                <li class="offcanvas__sub_menu_li"><a href="/Ko/" class="offcanvas__sub_menu_item">\uD55C\uAD6D\uC5B4</a></li>
                             </ul>
                         </li>
                     </ul>

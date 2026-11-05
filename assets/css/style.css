@@ -16390,6 +16390,12 @@ input.quickview__value--number {
   width: 48px;
 }
 
+.pilot-benefit--featured .pilot-circle-icon {
+  flex-basis: 80px;
+  height: 80px;
+  width: 80px;
+}
+
 .pilot-app-card {
   background: #fff;
   border: 1px solid var(--pilot-line);
