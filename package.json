@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build:case-studies": "node scripts/build-case-studies.cjs"
+  },
   "devDependencies": {
     "eslint-plugin-html": "^8.1.1"
   }

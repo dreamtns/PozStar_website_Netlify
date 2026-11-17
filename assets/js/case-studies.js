@@ -7,10 +7,8 @@
     var empty = document.getElementById('case-empty');
     if (!filters || !cases.length) return;
 
-    // Add categories on an article with data-categories="Category|Another category".
-    // New categories are included automatically; the reference categories stay available.
-    var categories = ['3.5 Ton', '6 Ton Class', '16 Ton Class', 'Bucket Replacement',
-        'Rotate Link', 'Swing Arm', 'Tilt Rotator', 'Two Machines', 'Three Machines'];
+    // Folder categories are generated with the gallery; additional article tags also work.
+    var categories = (filters.dataset.categories || '').split('|').filter(Boolean);
     var caseCategories = cases.map(function (entry) {
         return entry.dataset.categories.split('|').map(function (value) { return value.trim(); }).filter(Boolean);
     });
@@ -50,17 +48,37 @@
     var caption = document.getElementById('case-viewer-caption');
     if (!viewer || typeof viewer.showModal !== 'function') return;
 
+    var currentLinks = [];
+    var currentIndex = 0;
+    var previous = document.getElementById('case-viewer-previous');
+    var next = document.getElementById('case-viewer-next');
+
+    function showPhoto(index) {
+        currentIndex = (index + currentLinks.length) % currentLinks.length;
+        var link = currentLinks[currentIndex];
+        photo.src = link.href;
+        photo.alt = link.dataset.caption;
+        caption.textContent = link.dataset.caption;
+        previous.hidden = next.hidden = currentLinks.length < 2;
+    }
+
     document.querySelectorAll('.case-study__photos a').forEach(function (link) {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            var thumbnail = link.querySelector('img');
-            photo.src = link.href;
-            photo.alt = thumbnail.alt;
-            caption.textContent = thumbnail.alt;
+            currentLinks = Array.from(link.closest('.case-study__photos').querySelectorAll('a'));
+            showPhoto(currentLinks.indexOf(link));
             viewer.showModal();
         });
     });
     document.getElementById('case-viewer-close').addEventListener('click', function () { viewer.close(); });
+    previous.addEventListener('click', function () { showPhoto(currentIndex - 1); });
+    next.addEventListener('click', function () { showPhoto(currentIndex + 1); });
+    viewer.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            showPhoto(currentIndex + (event.key === 'ArrowLeft' ? -1 : 1));
+        }
+    });
     viewer.addEventListener('click', function (event) {
         if (event.target === viewer) {
             var bounds = viewer.getBoundingClientRect();
