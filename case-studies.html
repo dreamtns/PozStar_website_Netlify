@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Case Studies | PozStar Pilot</title>
+    <meta name="description" content="Browse PozStar Pilot excavator installations by machine class, attachment, and fleet configuration.">
+    <link rel="canonical" href="https://pozstar.com/case-studies.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/poz.png">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/case-studies.css">
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/case-studies.js" defer></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main class="main__content_wrapper case-studies">
+        <section class="case-studies__intro container" aria-labelledby="case-studies-title">
+            <span class="case-studies__eyebrow">POZSTAR PILOT</span>
+            <h1 id="case-studies-title">Case Studies</h1>
+            <p>Smart GNSS RTK guidance with wireless IMU technology for precise bucket positioning and flexible excavator compatibility.</p>
+            <div class="case-studies__features" aria-label="Key features">
+                <span>GNSS RTK</span><span>Wireless IMU Sensor</span><span>Tablet App</span>
+            </div>
+        </section>
+        <section class="container" aria-labelledby="case-category-title">
+            <div class="case-studies__filters">
+                <h2 id="case-category-title">Browse by Category</h2>
+                <div class="case-studies__buttons" id="case-filters" role="group" aria-labelledby="case-category-title" hidden></div>
+                <noscript>Enable JavaScript to filter by category. All installations are shown below.</noscript>
+            </div>
+        </section>
+        <section class="case-studies__library container" aria-labelledby="case-gallery-title">
+            <div class="case-studies__heading">
+                <h2 id="case-gallery-title">Latest Installations</h2>
+                <p>Newest first</p>
+            </div>
+            <p class="case-studies__status" id="case-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <div id="case-gallery">
+                <!-- Add new installations at the top with four photo links, a model heading,
+                     and pipe-separated data-categories. New categories appear automatically.
+                     These photos were extracted from the supplied PowerPoint reference. -->
+                <article class="case-study" data-case-study data-categories="6 Ton Class|Tilt Rotator" aria-labelledby="develon-title">
+                    <div class="case-study__photos" role="group" aria-label="DEVELON DX55-8K installation photos">
+                        <a href="assets/img/case-studies/develon-1.jpg" aria-label="Enlarge DEVELON photo 1"><img src="assets/img/case-studies/develon-1.jpg" alt="DEVELON DX55-8K: Excavator on site" loading="lazy" width="254" height="164"></a>
+                        <a href="assets/img/case-studies/develon-2.jpg" aria-label="Enlarge DEVELON photo 2"><img src="assets/img/case-studies/develon-2.jpg" alt="DEVELON DX55-8K: GNSS receiver setup" loading="lazy" width="234" height="164"></a>
+                        <a href="assets/img/case-studies/develon-3.jpg" aria-label="Enlarge DEVELON photo 3"><img src="assets/img/case-studies/develon-3.jpg" alt="DEVELON DX55-8K: Tilt rotator attachment" loading="lazy" width="244" height="164"></a>
+                        <a href="assets/img/case-studies/develon-4.jpg" aria-label="Enlarge DEVELON photo 4"><img src="assets/img/case-studies/develon-4.jpg" alt="DEVELON DX55-8K: Operator tablet guidance" loading="lazy" width="254" height="164"></a>
+                    </div>
+                    <h3 id="develon-title">DEVELON DX55-8K</h3>
+                    <p>6 Ton Class &middot; Tilt Rotator</p>
+                </article>
+                <article class="case-study" data-case-study data-categories="16 Ton Class" aria-labelledby="hyundai-title">
+                    <div class="case-study__photos" role="group" aria-label="HYUNDAI HW155A installation photos">
+                        <a href="assets/img/case-studies/hyundai-1.jpg" aria-label="Enlarge HYUNDAI photo 1"><img src="assets/img/case-studies/hyundai-1.jpg" alt="HYUNDAI HW155A: Excavator on site" loading="lazy" width="254" height="178"></a>
+                        <a href="assets/img/case-studies/hyundai-2.jpg" aria-label="Enlarge HYUNDAI photo 2"><img src="assets/img/case-studies/hyundai-2.jpg" alt="HYUNDAI HW155A: GNSS receiver installation" loading="lazy" width="234" height="178"></a>
+                        <a href="assets/img/case-studies/hyundai-3.jpg" aria-label="Enlarge HYUNDAI photo 3"><img src="assets/img/case-studies/hyundai-3.jpg" alt="HYUNDAI HW155A: Wireless IMU sensor" loading="lazy" width="244" height="178"></a>
+                        <a href="assets/img/case-studies/hyundai-4.jpg" aria-label="Enlarge HYUNDAI photo 4"><img src="assets/img/case-studies/hyundai-4.jpg" alt="HYUNDAI HW155A: Tablet guidance display" loading="lazy" width="254" height="178"></a>
+                    </div>
+                    <h3 id="hyundai-title">HYUNDAI HW155A</h3>
+                    <p>16 Ton Class</p>
+                </article>
+            </div>
+            <p class="case-studies__empty" id="case-empty" hidden>No installations in this category yet. Choose another category or All Installations.</p>
+        </section>
+        <dialog class="case-viewer" id="case-viewer" aria-labelledby="case-viewer-caption">
+            <button type="button" id="case-viewer-close" autofocus>Close</button>
+            <img id="case-viewer-photo" alt="">
+            <p id="case-viewer-caption"></p>
+        </dialog>
+    </main>
+    <div id="footer-container"></div>
+    <script src="assets/js/footer.js"></script>
+</body>
+</html>

@@ -31,6 +31,7 @@
                                     </ul>
                                 </li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="Partnership.html">Partnership</a></li>
+                                <li class="header__menu--items"><a class="header__menu--link" href="case-studies.html">Case Studies</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="news.html">News</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="contact.html">Contact</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="#">Language</a>
@@ -62,6 +63,7 @@
                             </ul>
                         </li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Partnership.html">Partnership</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="case-studies.html">Case Studies</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="news.html">News</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="contact.html">Contact</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="#">Language</a>
@@ -109,6 +111,7 @@
                                     </ul>
                                 </li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="Ko/Partnership.html">\uD30C\uD2B8\uB108\uC2ED</a></li>
+                                <li class="header__menu--items"><a class="header__menu--link" href="case-studies.html">Case Studies</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="Ko/news.html">\uB274\uC2A4</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="Ko/contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
                                 <li class="header__menu--items"><a class="header__menu--link" href="#">\uC5B8\uC5B4</a>
@@ -143,6 +146,7 @@
                             </ul>
                         </li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/Partnership.html">\uD30C\uD2B8\uB108\uC2ED</a></li>
+                        <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="case-studies.html">Case Studies</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/news.html">\uB274\uC2A4</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="Ko/contact.html">\uC81C\uD488 \uBB38\uC758</a></li>
                         <li class="offcanvas__menu_li"><a class="offcanvas__menu_item" href="#">\uC5B8\uC5B4</a>
