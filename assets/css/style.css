@@ -17322,33 +17322,26 @@ input.quickview__value--number {
 }
 
 .pilot-newsletter__application {
-  aspect-ratio: 303 / 271;
   border-radius: 6px;
   margin: 0;
   overflow: hidden;
 }
 
 .pilot-newsletter__application img {
+  aspect-ratio: 303 / 227;
   display: block;
-  height: 100%;
-  max-width: none;
-  width: 500%;
+  object-fit: cover;
+  width: 100%;
 }
 
-.pilot-newsletter__application--2 img {
-  transform: translateX(-20%);
-}
-
-.pilot-newsletter__application--3 img {
-  transform: translateX(-40%);
-}
-
-.pilot-newsletter__application--4 img {
-  transform: translateX(-60%);
-}
-
-.pilot-newsletter__application--5 img {
-  transform: translateX(-80%);
+.pilot-newsletter__application figcaption {
+  background: #073d7d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 8px 4px;
+  text-align: center;
 }
 
 .pilot-newsletter__partner {
