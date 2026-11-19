@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/case-studies.css">
     <script src="assets/js/header.js"></script>
     <script src="assets/js/case-studies.js" defer></script>
 </head>
@@ -22,9 +21,25 @@
 <body>
     <div id="header-container"></div>
     <main class="main__content_wrapper case-studies">
-        <section class="case-studies__intro container" aria-labelledby="case-studies-title">
-            <span class="case-studies__eyebrow">POZSTAR PILOT</span>
-            <h1 id="case-studies-title">Case Studies</h1>
+        <section class="breadcrumb__section breadcrumb__bg" aria-labelledby="case-studies-title">
+            <div class="container">
+                <div class="row row-cols-1">
+                    <div class="col">
+                        <div class="breadcrumb__content">
+                            <h1 class="breadcrumb__content--title mb-10" id="case-studies-title">Case Studies</h1>
+                            <nav aria-label="Breadcrumb">
+                                <ul class="breadcrumb__content--menu d-flex">
+                                    <li class="breadcrumb__content--menu__items"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb__content--menu__items"><span class="text__secondary" aria-current="page">Case Studies</span></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-studies__intro container" aria-labelledby="case-intro-title">
+            <h2 id="case-intro-title">PozStar Pilot</h2>
             <p>Smart GNSS RTK guidance with wireless IMU technology for precise bucket positioning and flexible excavator compatibility.</p>
             <section class="case-studies__features" aria-labelledby="case-features-title">
                 <h2 id="case-features-title">Key Features</h2>
@@ -65,10 +80,10 @@
                 </div>
             </section>
         </section>
-        <section class="container" aria-labelledby="case-category-title" style="padding-left: 0px; padding-right: 0px;">
-            <div class="case-studies__filters" style="padding: 0px 0px 0px 0px;">
+        <section class="container" aria-labelledby="case-category-title">
+            <div class="case-studies__filters">
                 <h2 id="case-category-title">Browse by Category</h2>
-                <div class="case-studies__buttons" id="case-filters" data-categories="2 Ton Class|3.5 Ton Class|6 Ton Class|16 Ton Class|20 Ton Class|Bucket Replacement|Rotate Link|Swing Arm|Swing Boom|Three Machines|Tilt Rotator|Two Machines" role="group" aria-labelledby="case-category-title" hidden></div>
+                <div class="case-studies__buttons" id="case-filters" data-categories="3.5 Ton Class|6 Ton Class|16 Ton Class|20 Ton Class|Bucket Replacement|Rotate Link|Swing Arm|Swing Boom|Three Machines|Tilt Rotator|Two Machines" role="group" aria-labelledby="case-category-title" hidden></div>
                 <noscript>Enable JavaScript to filter by category. All installations are shown below.</noscript>
             </div>
         </section>
