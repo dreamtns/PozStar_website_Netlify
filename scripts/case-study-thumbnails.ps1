@@ -1,6 +1,7 @@
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $jobs = [Console]::In.ReadToEnd() | ConvertFrom-Json
+$jpegCodec = [Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }
 foreach ($job in $jobs) {
     $image = [Drawing.Image]::FromFile($job.source)
     $bitmap = $null
@@ -19,7 +20,25 @@ foreach ($job in $jobs) {
         $width = [int][Math]::Ceiling($image.Width * $scale)
         $height = [int][Math]::Ceiling($image.Height * $scale)
         $graphics.DrawImage($image, [int]((640 - $width) / 2), [int]((427 - $height) / 2), $width, $height)
-        $bitmap.Save($job.target, [Drawing.Imaging.ImageFormat]::Jpeg)
+        # Keep 640x427 previews strictly below 40 KB (40,000 bytes).
+        $encoded = $null
+        for ($quality = 85; $quality -ge 5; $quality -= 5) {
+            $stream = [IO.MemoryStream]::new()
+            $parameters = [Drawing.Imaging.EncoderParameters]::new(1)
+            try {
+                $parameters.Param[0] = [Drawing.Imaging.EncoderParameter]::new([Drawing.Imaging.Encoder]::Quality, [long]$quality)
+                $bitmap.Save($stream, $jpegCodec, $parameters)
+                if ($stream.Length -lt 40000) {
+                    $encoded = $stream.ToArray()
+                    break
+                }
+            } finally {
+                $parameters.Dispose()
+                $stream.Dispose()
+            }
+        }
+        if ($null -eq $encoded) { throw "Cannot compress thumbnail below 40 KB: $($job.target)" }
+        [IO.File]::WriteAllBytes($job.target, $encoded)
     } finally {
         if ($graphics) { $graphics.Dispose() }
         if ($bitmap) { $bitmap.Dispose() }

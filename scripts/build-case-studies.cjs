@@ -15,6 +15,8 @@ const categories = fs.readdirSync(source, { withFileTypes: true })
     .filter(entry => entry.isDirectory()).map(entry => entry.name).sort(compare);
 const entries = [];
 const thumbnailJobs = new Map();
+const refreshThumbnails = process.argv.includes('--refresh-thumbnails');
+const expectedThumbnails = new Set();
 
 function collect(directory, category) {
     const children = fs.readdirSync(directory, { withFileTypes: true }).sort((a, b) => compare(a.name, b.name));
@@ -55,7 +57,10 @@ cases.forEach((entry, index) => {
         gallery += `                        <a href="${url(photo.file)}" data-caption="${escape(caption)}" aria-label="Enlarge ${escape(caption)}"${hidden ? ' hidden' : ''}>`;
         if (!hidden) {
             const thumbnail = path.join(thumbnailDirectory, photo.hash + '.jpg');
-            if (!fs.existsSync(thumbnail)) thumbnailJobs.set(photo.hash, { source: photo.file, target: thumbnail });
+            expectedThumbnails.add(path.basename(thumbnail));
+            if (refreshThumbnails || !fs.existsSync(thumbnail) || fs.statSync(thumbnail).size >= 40000) {
+                thumbnailJobs.set(photo.hash, { source: photo.file, target: thumbnail });
+            }
             gallery += `<img src="${url(thumbnail)}" alt="${escape(caption)}" loading="lazy" decoding="async" width="640" height="427">`;
         }
         gallery += '</a>\n';
@@ -69,6 +74,14 @@ if (thumbnailJobs.size) {
     execFileSync('powershell.exe', ['-NoProfile', '-Command', thumbnailScript], {
         input: JSON.stringify([...thumbnailJobs.values()]), encoding: 'utf8', stdio: ['pipe', 'inherit', 'inherit']
     });
+}
+// A refresh also removes generated previews whose source content has changed.
+if (refreshThumbnails) {
+    for (const filename of fs.readdirSync(thumbnailDirectory)) {
+        if (/^[a-f0-9]{64}\.jpg$/.test(filename) && !expectedThumbnails.has(filename)) {
+            fs.unlinkSync(path.join(thumbnailDirectory, filename));
+        }
+    }
 }
 let page = fs.readFileSync(pagePath, 'utf8');
 const start = '<!-- CASE GALLERY START -->';
