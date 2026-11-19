@@ -9,3 +9,6 @@ php/config.php
 
 php/contact_data.json
 
+
+# Local Netlify folder
+.netlify
