@@ -800,13 +800,19 @@
             <p class="case-studies__empty" id="case-empty" hidden>No installations in this category yet. Choose another category or All Installations.</p>
         </section>
         <dialog class="case-viewer" id="case-viewer" aria-labelledby="case-viewer-caption">
-            <button type="button" id="case-viewer-close" autofocus>Close</button>
-            <img id="case-viewer-photo" alt="">
-            <div class="case-viewer__navigation">
-                <button type="button" id="case-viewer-previous" aria-label="Previous photo">&larr;</button>
-                <p id="case-viewer-caption" aria-live="polite"></p>
-                <button type="button" id="case-viewer-next" aria-label="Next photo">&rarr;</button>
+            <button type="button" id="case-viewer-close" aria-label="Close photo viewer" autofocus>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+            </button>
+            <div class="case-viewer__stage" id="case-viewer-stage">
+                <img id="case-viewer-photo" alt="" draggable="false">
             </div>
+            <button type="button" id="case-viewer-previous" aria-label="Previous photo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 5-7 7 7 7" /></svg>
+            </button>
+            <p id="case-viewer-caption" aria-live="polite"></p>
+            <button type="button" id="case-viewer-next" aria-label="Next photo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5 7 7-7 7" /></svg>
+            </button>
         </dialog>
     </main>
     <div id="footer-container"></div>

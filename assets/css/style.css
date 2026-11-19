@@ -18377,15 +18377,29 @@ input.quickview__value--number {
 .case-study p { margin: 0; color: var(--text-gray-color); }
 .case-studies [hidden] { display: none !important; }
 .case-studies__empty { padding: 32px 24px; background: var(--bg-gray-color); border-radius: 6px; color: var(--text-gray-color); }
-.case-viewer { position: fixed; inset: 0; margin: auto; width: min(900px, 94vw); max-width: 94vw; max-height: 92vh; padding: 60px 20px 20px; border: 0; border-radius: 6px; background: var(--white-color); color: var(--primary-color); }
-.case-viewer::backdrop { background: rgb(7 18 29 / 85%); }
-.case-viewer img { display: block; width: 100%; max-height: 70vh; object-fit: contain; }
-.case-viewer p { margin: 16px 0 0; }
-.case-viewer button { min-height: 44px; border: 1px solid var(--text-gray-color); border-radius: 6px; padding: 8px 12px; background: var(--white-color); color: var(--primary-color); cursor: pointer; }
-#case-viewer-close { position: absolute; top: 10px; right: 16px; }
-.case-viewer__navigation { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; }
-.case-viewer__navigation p { margin: 0; text-align: center; }
-.case-viewer button:focus-visible { outline: 3px solid #176da0; outline-offset: 3px; }
+.case-viewer { position: fixed; inset: 0; margin: 0; width: 100%; height: 100%; height: 100dvh; max-width: none; max-height: none; padding: 72px 88px 88px; border: 0; background: transparent; color: #fff; overflow: hidden; }
+.case-viewer[open] { display: flex; flex-direction: column; }
+.case-viewer::backdrop { background: rgb(16 18 20 / 85%);}
+.case-viewer__stage { flex: 1; min-height: 0; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.case-viewer img { display: block; width: 100%; height: 100%; object-fit: contain; transform: scale(var(--case-photo-zoom, 1)); }
+.case-viewer button { position: absolute; z-index: 1; display: grid; place-items: center; width: 48px; height: 48px; padding: 12px; border: 1px solid rgb(255 255 255 / 25%); border-radius: 50%; background: rgb(255 255 255 / 8%); color: #fff; cursor: pointer; }
+.case-viewer button:hover { background: rgb(255 255 255 / 18%); border-color: rgb(255 255 255 / 60%); }
+.case-viewer button svg { display: block; width: 24px; height: 24px; }
+#case-viewer-close { top: max(16px, env(safe-area-inset-top)); right: max(24px, env(safe-area-inset-right)); }
+#case-viewer-previous, #case-viewer-next { top: 50%; transform: translateY(-50%); }
+#case-viewer-previous { left: max(24px, env(safe-area-inset-left)); }
+#case-viewer-next { right: max(24px, env(safe-area-inset-right)); }
+#case-viewer-caption { position: absolute; bottom: max(24px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); width: min(760px, calc(100% - 48px)); margin: 0; color: #fff; font-size: 16px; line-height: 1.5; text-align: center; overflow-wrap: anywhere; }
+.case-viewer button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.case-viewer [hidden] { display: none !important; }
+@media (max-width: 575px) {
+    .case-viewer { padding: 72px 56px 112px; }
+    .case-viewer button { width: 44px; height: 44px; padding: 10px; }
+    #case-viewer-previous { left: max(6px, env(safe-area-inset-left)); }
+    #case-viewer-next { right: max(6px, env(safe-area-inset-right)); }
+    #case-viewer-close { right: max(16px, env(safe-area-inset-right)); }
+    #case-viewer-caption { font-size: 14px; }
+}
 html:has(.case-viewer[open]) { overflow: hidden; }
 @media (max-width: 991px) {
     .case-studies__feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

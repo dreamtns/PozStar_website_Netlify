@@ -52,10 +52,18 @@
     var currentIndex = 0;
     var previous = document.getElementById('case-viewer-previous');
     var next = document.getElementById('case-viewer-next');
+    var stage = document.getElementById('case-viewer-stage');
+    var zoom = 1;
+
+    function setZoom(value) {
+        zoom = Math.max(1, Math.min(1.25, value));
+        photo.style.setProperty('--case-photo-zoom', zoom.toFixed(2));
+    }
 
     function showPhoto(index) {
         currentIndex = (index + currentLinks.length) % currentLinks.length;
         var link = currentLinks[currentIndex];
+        setZoom(1);
         photo.src = link.href;
         photo.alt = link.dataset.caption;
         caption.textContent = link.dataset.caption;
@@ -73,17 +81,39 @@
     document.getElementById('case-viewer-close').addEventListener('click', function () { viewer.close(); });
     previous.addEventListener('click', function () { showPhoto(currentIndex - 1); });
     next.addEventListener('click', function () { showPhoto(currentIndex + 1); });
+    stage.addEventListener('wheel', function (event) {
+        // Preserve the browser's own Ctrl+wheel / trackpad pinch zoom.
+        if (event.ctrlKey || !event.deltaY) return;
+        event.preventDefault();
+        setZoom(zoom + (event.deltaY < 0 ? 0.025 : -0.025));
+    }, { passive: false });
+    viewer.addEventListener('close', function () { setZoom(1); });
     viewer.addEventListener('keydown', function (event) {
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
             event.preventDefault();
             showPhoto(currentIndex + (event.key === 'ArrowLeft' ? -1 : 1));
         }
+        if (event.key === '+' || event.key === '=' || event.key === '-' || event.key === '0') {
+            if (event.ctrlKey || event.metaKey || event.altKey) return;
+            event.preventDefault();
+            setZoom(event.key === '0' ? 1 : zoom + (event.key === '-' ? -0.025 : 0.025));
+        }
     });
     viewer.addEventListener('click', function (event) {
-        if (event.target === viewer) {
-            var bounds = viewer.getBoundingClientRect();
-            if (event.clientX < bounds.left || event.clientX > bounds.right ||
-                event.clientY < bounds.top || event.clientY > bounds.bottom) viewer.close();
+        if (event.target.closest('button') || caption.contains(event.target)) return;
+        if (event.target === photo) {
+            // object-fit leaves empty space inside the image element. Test the
+            // actual photo bounds, including its current zoom, instead.
+            if (!photo.naturalWidth || !photo.naturalHeight) return;
+            var bounds = photo.getBoundingClientRect();
+            var fit = Math.min(bounds.width / photo.naturalWidth, bounds.height / photo.naturalHeight);
+            var width = photo.naturalWidth * fit;
+            var height = photo.naturalHeight * fit;
+            var left = bounds.left + (bounds.width - width) / 2;
+            var top = bounds.top + (bounds.height - height) / 2;
+            if (event.clientX >= left && event.clientX <= left + width &&
+                event.clientY >= top && event.clientY <= top + height) return;
         }
+        viewer.close();
     });
 })();
